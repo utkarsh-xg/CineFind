@@ -7,33 +7,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-btn">🌙</button>
+
     <div class="overlay">
         <div class="container">
+
             <h1>CineFind</h1>
-                <p class="tagline">Find. Know. Binge Smarter.</p>
+            <p class="tagline">Find. Know. Binge Smarter.</p>
+
             <div class="search-box">
                 <input type="text" id="searchInput" placeholder="Search for a movie or web series...">
             </div>
+
+            <h2 id="sectionTitle">🔥 Trending Movies</h2>
             <div id="movies" class="movies"></div>
+
+            <div id="loading" class="loading">Loading...</div>
         </div>
     </div>
 
-    <!-- Movie Details Modal -->
+    <!-- Movie Modal -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span id="closeBtn" class="close">&times;</span>
-            <div class="modal-images">
-                <img id="modalPoster" src="" alt="Poster">
+
+            <img id="modalPoster" alt="Poster" class="modal-poster">
+
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalOverview"></p>
+                <p><strong>Year:</strong> <span id="modalYear"></span></p>
+                <p><strong>Language:</strong> <span id="modalLanguage"></span></p>
+                <p><strong>Country:</strong> <span id="modalCountry"></span></p>
+                <p><strong>IMDb Rating:</strong> <span id="modalRating"></span></p>
             </div>
-            <h2 id="modalTitle"></h2>
-            <p id="modalOverview"></p>
-            <p><strong>Year:</strong> <span id="modalYear"></span></p>
-            <p><strong>Language:</strong> <span id="modalLanguage"></span></p>
-            <p><strong>Country:</strong> <span id="modalCountry"></span></p>
-            <p><strong>IMDb Rating:</strong> <span id="modalRating"></span></p>
         </div>
     </div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
